@@ -1,5 +1,6 @@
 package pertemuan_3
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -32,10 +33,12 @@ class ThirdActivity : AppCompatActivity() {
         }
 
         binding.btnKirim.setOnClickListener {
-            val nomor = binding.inputNoTujuan.text
+            val nomor = binding.inputNoTujuan
 
-            Toast.makeText(this, "pesan di kirim ke :  $nomor" , Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "pesan di kirim ke : $nomor " , Toast.LENGTH_SHORT).show()
+
+            val intent = Intent(this, ThirdResultActivity::class.java)
+            startActivity(intent)
         }
         }
     }
-}

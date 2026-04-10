@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Beng Apps</string>
+    <string name="judul">Verifikasi Login</string>
+    <string name="judul_baru">Verifikasi Login</string>
 </resources>

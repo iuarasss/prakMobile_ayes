@@ -1,4 +1,4 @@
-package pertemuan_3
+package com.example.bengapps.pertemuan_3
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

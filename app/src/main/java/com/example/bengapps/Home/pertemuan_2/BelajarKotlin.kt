@@ -1,4 +1,4 @@
-package com.example.bengapps.pertemuan_2
+package com.example.bengapps.Home.pertemuan_2
 
 fun main(){
     println("Hai rekan-rekan...")

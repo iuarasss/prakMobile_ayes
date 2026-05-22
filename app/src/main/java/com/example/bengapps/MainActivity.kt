@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.bengapps.databinding.ActivityMainBinding
-import com.example.bengapps.pertemuan_4.FourthActivity
+import com.example.bengapps.Home.pertemuan_4.FourthActivity
 
 class MainActivity : AppCompatActivity() {
 

@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.bengapps.AuthActivity
+import com.example.bengapps.Home.pertemuan_10.TenthActivity
 import com.example.bengapps.Home.pertemuan_4.FourthActivity
 import com.example.bengapps.Home.pertemuan_9.NinthActivity
 import com.example.bengapps.R
@@ -72,6 +73,11 @@ class HomeFragment : Fragment() {
         binding.btnToNinth.setOnClickListener {
 
             val intent = Intent(requireContext(), NinthActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnToTenth.setOnClickListener {
+
+            val intent = Intent(requireContext(), TenthActivity::class.java)
             startActivity(intent)
         }
 

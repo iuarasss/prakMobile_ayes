@@ -15,6 +15,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.bengapps.AuthActivity
 import com.example.bengapps.Home.pertemuan_10.TenthActivity
+import com.example.bengapps.Home.pertemuan_13.ThirteenActivity
 import com.example.bengapps.Home.pertemuan_4.FourthActivity
 import com.example.bengapps.Home.pertemuan_9.NinthActivity
 import com.example.bengapps.Home.photo.PhotoAdapter
@@ -92,6 +93,11 @@ class HomeFragment : Fragment() {
         binding.btnToTenth.setOnClickListener {
 
             val intent = Intent(requireContext(), TenthActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnToThirteen.setOnClickListener {
+
+            val intent = Intent(requireContext(), ThirteenActivity::class.java)
             startActivity(intent)
         }
         loadCatFact()

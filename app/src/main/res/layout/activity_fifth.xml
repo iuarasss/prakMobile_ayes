@@ -26,6 +26,7 @@
         />
     </com.google.android.material.appbar.AppBarLayout>
 
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -110,6 +111,29 @@
                 android:text="Web View"
                 app:icon="@drawable/ic_add"
                 app:iconGravity="textStart"/>
+
+            <EditText
+                android:id="@+id/inputNoTujuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan nomor tujuan"
+                android:inputType="phone"/>
+            <Button
+                android:id="@+id/btnKirim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="60dp"
+                android:layout_marginTop="128dp"
+                android:backgroundTint="@color/warna_but"
+                android:text="Kirim"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.266"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputNoTujuan" />
+
+
+
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

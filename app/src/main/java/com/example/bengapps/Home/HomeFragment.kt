@@ -16,7 +16,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.bengapps.AuthActivity
 import com.example.bengapps.Home.pertemuan_10.TenthActivity
 import com.example.bengapps.Home.pertemuan_13.ThirteenActivity
+import com.example.bengapps.Home.pertemuan_3.ThirdActivity
 import com.example.bengapps.Home.pertemuan_4.FourthActivity
+import com.example.bengapps.Home.pertemuan_5.FifthActivity
 import com.example.bengapps.Home.pertemuan_9.NinthActivity
 import com.example.bengapps.Home.photo.PhotoAdapter
 import com.example.bengapps.R
@@ -84,6 +86,16 @@ class HomeFragment : Fragment() {
                 }
                 .setNegativeButton("Tidak", null)
                 .show()
+        }
+        binding.btnToFifth.setOnClickListener {
+
+            val intent = Intent(requireContext(), FifthActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnToThird.setOnClickListener {
+
+            val intent = Intent(requireContext(), ThirdActivity::class.java)
+            startActivity(intent)
         }
         binding.btnToNinth.setOnClickListener {
 

@@ -6,15 +6,27 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.bengapps.Home.pertemuan_3.ThirdResultActivity
 import com.example.bengapps.R
 import com.example.bengapps.databinding.ActivityFifthBinding
+import com.example.bengapps.utils.NotificationHelper
 
 class FifthActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityFifthBinding
+
+    private val notificationPermissionLauncher =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
+            if (isGranted) {
+                Toast.makeText(this, "Notifikasi diizinkan", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Notifikasi ditolak", Toast.LENGTH_SHORT).show()
+            }
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +52,20 @@ class FifthActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        binding.btnKirim.setOnClickListener {
+            val noTujuan = binding.inputNoTujuan.text
+            val intent = Intent(this, ThirdResultActivity::class.java)
+
+            //startActivity(intent)
+
+            NotificationHelper.showNotification(
+                this, //Jika panggil di fragment maka requireContext()
+                "Pesanan Anda",
+                "Halo $08215012398, Pesanan Anda Sedang Diproses",
+                intent
+            )
         }
     }
 
